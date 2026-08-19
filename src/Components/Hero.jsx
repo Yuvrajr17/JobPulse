@@ -49,9 +49,11 @@ function Hero() {
           </div>
 
           <div className="mt-7 flex min-w-0 items-center gap-3">
-  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
-    〽
-  </div>
+  <img
+  src="/favicon.svg"
+  alt="JobPulse"
+  className="h-9 w-9 rounded-lg"
+/>
 
   <div className="min-w-0">
     <p className="text-xs font-medium text-slate-700 dark:text-slate-300">

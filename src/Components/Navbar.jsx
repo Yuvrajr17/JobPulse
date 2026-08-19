@@ -18,6 +18,8 @@ function Navbar() {
     ["#features", "Features"],
     ["#how-it-works", "How It Works"],
     ["#jobs", "Jobs"],
+    ["#pricing", "Pricing"],
+    ["about", "About"],
   ];
 
   return (
@@ -30,9 +32,11 @@ function Navbar() {
             className="flex min-w-0 shrink items-center gap-1.5"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="shrink-0 text-xl font-bold text-blue-600 sm:text-2xl">
-              〽
-            </span>
+             <img
+    src="/favicon.svg"
+    alt="JobPulse"
+    className="h-9 w-9 rounded-lg sm:h-10 sm:w-10"
+  />
 
             <span className="truncate text-lg font-bold tracking-tight text-slate-900 dark:text-white sm:text-xl">
               Job<span className="text-blue-600">Pulse</span>

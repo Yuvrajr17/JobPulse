@@ -73,9 +73,11 @@ function Footer() {
                 dark:text-white
               "
             >
-              <span className="text-2xl text-blue-600">
-                〽
-              </span>
+              <img
+  src="/favicon.svg"
+  alt="JobPulse"
+  className="h-9 w-9 rounded-lg"
+/>
 
               Job
               <span className="text-blue-600">
