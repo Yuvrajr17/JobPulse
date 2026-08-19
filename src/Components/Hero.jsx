@@ -48,28 +48,21 @@ function Hero() {
             </a>
           </div>
 
-          <div className="mt-7 flex w-full min-w-0 items-center gap-3">
-            <div className="flex shrink-0 -space-x-2">
-              {["Y", "A", "R", "S"].map((letter) => (
-                <div
-                  key={letter}
-                  className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-50 bg-slate-200 text-[10px] font-bold text-slate-600 dark:border-[#0b1220] dark:bg-slate-700 dark:text-slate-200"
-                >
-                  {letter}
-                </div>
-              ))}
-            </div>
+          <div className="mt-7 flex min-w-0 items-center gap-3">
+  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
+    〽
+  </div>
 
-            <div className="min-w-0">
-              <p className="text-xs font-medium text-slate-700 dark:text-slate-300">
-                Built for focused job searching
-              </p>
+  <div className="min-w-0">
+    <p className="text-xs font-medium text-slate-700 dark:text-slate-300">
+      Built for focused job searching
+    </p>
 
-              <p className="mt-0.5 text-[11px] text-slate-400">
-                Discover · Save · Apply
-              </p>
-            </div>
-          </div>
+    <p className="mt-0.5 text-[11px] text-slate-400">
+      Discover · Save · Apply
+    </p>
+  </div>
+</div>
         </div>
 
         <div className="w-full max-w-full min-w-0 overflow-hidden lg:pt-2">

@@ -112,21 +112,6 @@ function FeatureStrip() {
               </span>
             </h2>
           </div>
-
-          <p
-            className="
-              w-full
-              max-w-md
-              text-sm
-              leading-6
-              text-slate-500
-
-              dark:text-slate-400
-            "
-          >
-            Less searching. Less switching between platforms.
-            More time spent on opportunities that actually fit.
-          </p>
         </div>
 
         {/* Feature Grid */}
