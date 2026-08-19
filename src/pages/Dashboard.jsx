@@ -7,10 +7,10 @@ import Footer from "../Components/Footer";
 
 function Dashboard() {
   return (
-    <>
+    <div className="w-full max-w-full min-w-0 overflow-x-hidden">
       <Navbar />
 
-      <main>
+      <main className="w-full max-w-full min-w-0 overflow-x-hidden">
         <Hero />
         <FeatureStrip />
         <HowItWorks />
@@ -18,7 +18,7 @@ function Dashboard() {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

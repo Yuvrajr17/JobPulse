@@ -34,17 +34,18 @@ function FeatureStrip() {
     <section
       id="features"
       className="
-        relative
+        w-full
+        overflow-hidden
         border-y
         border-slate-100
-        bg-slate-50
+        bg-white
         px-4
         py-12
         transition-colors
         duration-300
 
         dark:border-slate-800
-        dark:bg-slate-900/60
+        dark:bg-[#0f172a]
 
         sm:px-6
         sm:py-14
@@ -53,59 +54,36 @@ function FeatureStrip() {
         lg:py-16
       "
     >
-      {/* Background glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-0
-          h-48
-          w-96
-          -translate-x-1/2
-          rounded-full
-          bg-violet-200/20
-          blur-3xl
+      <div className="mx-auto w-full max-w-[1380px]">
 
-          dark:bg-violet-900/10
-        "
-      />
-
-      {/* Main container */}
-      <div
-        className="
-          relative
-          mx-auto
-          max-w-[1380px]
-        "
-      >
-
-        {/* Section intro */}
+        {/* Section Header */}
         <div
           className="
             mb-8
             flex
             flex-col
-            gap-3
+            gap-4
 
-            lg:mb-10
+            sm:mb-10
+
             lg:flex-row
             lg:items-end
             lg:justify-between
           "
         >
-
-          <div className="max-w-xl">
+          <div className="w-full max-w-2xl">
 
             <p
               className="
-                text-xs
+                text-[10px]
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-violet-600
+                text-blue-600
 
-                dark:text-violet-400
+                sm:text-xs
+
+                dark:text-blue-400
               "
             >
               One focused workspace
@@ -114,8 +92,10 @@ function FeatureStrip() {
             <h2
               className="
                 mt-2
+                max-w-2xl
                 text-2xl
                 font-bold
+                leading-tight
                 tracking-tight
                 text-slate-950
 
@@ -126,17 +106,16 @@ function FeatureStrip() {
                 lg:text-4xl
               "
             >
-              Everything you need to
-              <span className="text-violet-600">
-                {" "}job search smarter.
+              Everything you need to{" "}
+              <span className="text-blue-600 dark:text-blue-400">
+                job search smarter.
               </span>
             </h2>
-
           </div>
-
 
           <p
             className="
+              w-full
               max-w-md
               text-sm
               leading-6
@@ -148,49 +127,40 @@ function FeatureStrip() {
             Less searching. Less switching between platforms.
             More time spent on opportunities that actually fit.
           </p>
-
         </div>
-
 
         {/* Feature Grid */}
         <div
           className="
             grid
+            w-full
             grid-cols-1
-            gap-px
             overflow-hidden
             rounded-2xl
             border
             border-slate-200
             bg-slate-200
 
-            dark:border-slate-800
-            dark:bg-slate-800
-
             sm:grid-cols-2
 
             lg:grid-cols-4
+
+            dark:border-slate-800
+            dark:bg-slate-800
           "
         >
-
           {features.map((feature) => (
             <FeatureCard
               key={feature.number}
               {...feature}
             />
           ))}
-
         </div>
 
       </div>
     </section>
   );
 }
-
-
-/* ============================================
-   FEATURE CARD
-============================================ */
 
 function FeatureCard({
   number,
@@ -203,58 +173,54 @@ function FeatureCard({
       className="
         group
         relative
+        flex
+        min-h-[220px]
+        min-w-0
+        flex-col
         bg-white
         p-5
-        transition-all
+        transition-colors
         duration-300
 
-        hover:bg-violet-50/50
+        hover:bg-blue-50/50
 
-        dark:bg-slate-900
-        dark:hover:bg-violet-950/20
+        dark:bg-[#111827]
+        dark:hover:bg-blue-950/20
 
+        sm:min-h-[230px]
         sm:p-6
       "
     >
+      {/* Top */}
+      <div className="flex items-center justify-between gap-3">
 
-      {/* Top row */}
-      <div
-        className="
-          flex
-          items-center
-          justify-between
-        "
-      >
-
-        {/* Icon */}
         <div
           className="
             flex
             h-10
             w-10
+            shrink-0
             items-center
             justify-center
             rounded-xl
-            bg-violet-100
+            bg-blue-50
             text-lg
             font-semibold
-            text-violet-600
-
-            transition-transform
+            text-blue-600
+            transition-all
             duration-300
 
             group-hover:-translate-y-1
-            group-hover:rotate-3
+            group-hover:bg-blue-100
 
-            dark:bg-violet-950/60
-            dark:text-violet-400
+            dark:bg-blue-950/50
+            dark:text-blue-400
+            dark:group-hover:bg-blue-900/50
           "
         >
           {icon}
         </div>
 
-
-        {/* Number */}
         <span
           className="
             text-[10px]
@@ -267,17 +233,16 @@ function FeatureCard({
         >
           {number}
         </span>
-
       </div>
 
-
       {/* Content */}
-      <div className="mt-7">
+      <div className="mt-6 min-w-0">
 
         <h3
           className="
             text-base
             font-bold
+            leading-6
             text-slate-900
 
             dark:text-white
@@ -298,35 +263,30 @@ function FeatureCard({
         >
           {description}
         </p>
-
       </div>
 
-
-      {/* Hover arrow */}
+      {/* Explore */}
       <div
         className="
-          mt-5
+          mt-auto
           flex
           items-center
           gap-1
+          pt-6
           text-[10px]
           font-semibold
-          text-violet-600
-
-          opacity-0
+          text-blue-600
           transition-all
           duration-300
 
           group-hover:translate-x-1
-          group-hover:opacity-100
 
-          dark:text-violet-400
+          dark:text-blue-400
         "
       >
         Explore
         <span>→</span>
       </div>
-
     </article>
   );
 }

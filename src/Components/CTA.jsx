@@ -3,15 +3,15 @@ function CTA() {
     <section
       id="jobs"
       className="
-        relative
+        w-full
         overflow-hidden
-        bg-slate-50
+        bg-white
         px-4
-        py-16
+        py-14
         transition-colors
         duration-300
 
-        dark:bg-slate-900
+        dark:bg-[#0b1220]
 
         sm:px-6
         sm:py-20
@@ -20,42 +20,27 @@ function CTA() {
         lg:py-24
       "
     >
-      {/* Background Glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-1/2
-          h-80
-          w-80
-          -translate-x-1/2
-          -translate-y-1/2
-          rounded-full
-          bg-violet-200/30
-          blur-3xl
-
-          dark:bg-violet-900/20
-        "
-      />
-
-      {/* CTA Card */}
       <div
         className="
           relative
           mx-auto
+          w-full
           max-w-[1100px]
           overflow-hidden
-          rounded-3xl
-          bg-gradient-to-br
-          from-violet-600
-          via-purple-600
-          to-fuchsia-600
-          px-6
-          py-12
+          rounded-2xl
+          border
+          border-blue-100
+          bg-blue-600
+          px-5
+          py-10
           text-center
-          shadow-[0_25px_70px_rgba(109,40,217,0.25)]
+          shadow-[0_20px_55px_rgba(37,99,235,0.14)]
 
+          dark:border-blue-900/60
+          dark:bg-blue-700
+          dark:shadow-[0_20px_55px_rgba(0,0,0,0.25)]
+
+          sm:rounded-3xl
           sm:px-10
           sm:py-14
 
@@ -63,19 +48,23 @@ function CTA() {
           lg:py-16
         "
       >
-
-        {/* Decorative circles */}
+        {/* Decorative elements */}
         <div
           className="
             pointer-events-none
             absolute
-            -right-20
-            -top-20
-            h-48
-            w-48
+            -right-16
+            -top-16
+            h-36
+            w-36
             rounded-full
             border
             border-white/10
+
+            sm:-right-20
+            sm:-top-20
+            sm:h-48
+            sm:w-48
           "
         />
 
@@ -83,56 +72,112 @@ function CTA() {
           className="
             pointer-events-none
             absolute
-            -bottom-24
-            -left-16
-            h-56
-            w-56
+            -bottom-20
+            -left-12
+            h-44
+            w-44
             rounded-full
             border
             border-white/10
+
+            sm:-bottom-24
+            sm:-left-16
+            sm:h-56
+            sm:w-56
+          "
+        />
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            right-8
+            top-8
+            h-2
+            w-2
+            rounded-full
+            bg-white/20
+
+            sm:right-10
+            sm:top-10
+          "
+        />
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            bottom-8
+            left-10
+            h-3
+            w-3
+            rounded-full
+            bg-white/10
+
+            sm:bottom-12
+            sm:left-16
           "
         />
 
         {/* Content */}
-        <div className="relative mx-auto max-w-2xl">
-
+        <div
+          className="
+            relative
+            mx-auto
+            w-full
+            max-w-2xl
+          "
+        >
+          {/* Icon */}
           <div
             className="
               mx-auto
               flex
-              h-12
-              w-12
+              h-11
+              w-11
               items-center
               justify-center
-              rounded-2xl
+              rounded-xl
               bg-white/15
-              text-xl
+              text-lg
               text-white
               backdrop-blur-sm
+
+              sm:h-12
+              sm:w-12
+              sm:rounded-2xl
+              sm:text-xl
             "
           >
             ✦
           </div>
 
+          {/* Eyebrow */}
           <p
             className="
               mt-5
-              text-xs
+              text-[10px]
               font-bold
               uppercase
-              tracking-[0.18em]
-              text-violet-100
+              tracking-[0.16em]
+              text-blue-100
+
+              sm:text-xs
+              sm:tracking-[0.18em]
             "
           >
             Your next opportunity starts here
           </p>
 
+          {/* Heading */}
           <h2
             className="
+              mx-auto
               mt-3
-              text-3xl
+              max-w-xl
+              text-[28px]
               font-extrabold
-              leading-tight
+              leading-[1.15]
               tracking-tight
               text-white
 
@@ -142,57 +187,60 @@ function CTA() {
             "
           >
             Stop searching everywhere.
-            <br />
+            <br className="hidden sm:block" />
 
-            <span className="text-violet-200">
+            <span className="text-blue-100">
               Start finding what fits.
             </span>
           </h2>
 
+          {/* Description */}
           <p
             className="
               mx-auto
               mt-5
+              w-full
               max-w-xl
               text-sm
               leading-6
-              text-violet-100
+              text-blue-100
 
               sm:text-base
               sm:leading-7
             "
           >
-            Bring your job search into one focused workspace
-            and spend more time on opportunities that matter.
+            Bring your job search into one focused workspace and spend more
+            time on opportunities that matter.
           </p>
 
-
-          {/* Button */}
-          <div className="mt-8">
-
+          {/* CTA */}
+          <div className="mt-7 sm:mt-8">
             <a
               href="#top"
               className="
                 group
                 inline-flex
+                w-full
                 items-center
                 justify-center
                 gap-3
                 rounded-xl
                 bg-white
-                px-7
+                px-6
                 py-3.5
                 text-sm
                 font-bold
-                text-violet-700
-                shadow-xl
-                shadow-violet-900/20
-
+                text-blue-700
+                shadow-lg
+                shadow-blue-900/20
                 transition-all
                 duration-300
 
                 hover:-translate-y-1
-                hover:bg-violet-50
+                hover:bg-blue-50
+
+                sm:w-auto
+                sm:px-7
               "
             >
               Start Exploring
@@ -208,11 +256,8 @@ function CTA() {
                 →
               </span>
             </a>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

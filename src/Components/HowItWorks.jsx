@@ -28,17 +28,18 @@ function HowItWorks() {
       id="how-it-works"
       className="
         relative
+        w-full
         overflow-hidden
-        bg-white
+        bg-slate-50
         px-4
-        py-16
+        py-14
         transition-colors
         duration-300
 
-        dark:bg-slate-950
+        dark:bg-[#0b1220]
 
         sm:px-6
-        sm:py-20
+        sm:py-18
 
         lg:px-8
         lg:py-24
@@ -49,15 +50,19 @@ function HowItWorks() {
         className="
           pointer-events-none
           absolute
-          -right-40
-          top-20
-          h-96
-          w-96
+          -right-32
+          top-16
+          h-64
+          w-64
           rounded-full
-          bg-violet-200/20
+          bg-blue-100/50
           blur-3xl
 
-          dark:bg-violet-900/10
+          dark:bg-blue-950/20
+
+          sm:-right-40
+          sm:h-80
+          sm:w-80
         "
       />
 
@@ -65,42 +70,50 @@ function HowItWorks() {
         className="
           pointer-events-none
           absolute
-          -left-40
-          bottom-0
-          h-80
-          w-80
+          -bottom-20
+          -left-32
+          h-64
+          w-64
           rounded-full
-          bg-purple-200/15
+          bg-slate-200/60
           blur-3xl
 
-          dark:bg-purple-900/10
+          dark:bg-slate-800/20
+
+          sm:h-72
+          sm:w-72
         "
       />
 
-      {/* Main Container */}
+      {/* Container */}
       <div
         className="
           relative
           mx-auto
+          w-full
           max-w-[1200px]
         "
       >
-
-        {/* =====================================
-            SECTION HEADER
-        ===================================== */}
-
-        <div className="mx-auto max-w-2xl text-center">
-
+        {/* Header */}
+        <div
+          className="
+            mx-auto
+            w-full
+            max-w-2xl
+            text-center
+          "
+        >
           <p
             className="
-              text-xs
+              text-[10px]
               font-bold
               uppercase
               tracking-[0.18em]
-              text-violet-600
+              text-blue-600
 
-              dark:text-violet-400
+              sm:text-xs
+
+              dark:text-blue-400
             "
           >
             How it works
@@ -109,8 +122,9 @@ function HowItWorks() {
           <h2
             className="
               mt-3
-              text-3xl
+              text-[28px]
               font-extrabold
+              leading-[1.15]
               tracking-tight
               text-slate-950
 
@@ -121,9 +135,9 @@ function HowItWorks() {
               lg:text-5xl
             "
           >
-            From searching to
-            <span className="text-violet-600">
-              {" "}focused action.
+            From searching to{" "}
+            <span className="text-blue-600 dark:text-blue-400">
+              focused action.
             </span>
           </h2>
 
@@ -131,6 +145,7 @@ function HowItWorks() {
             className="
               mx-auto
               mt-4
+              w-full
               max-w-xl
               text-sm
               leading-6
@@ -142,26 +157,23 @@ function HowItWorks() {
               sm:leading-7
             "
           >
-            JobPulse turns a scattered job search into a
-            simple workflow that helps you spend less time
-            searching and more time applying.
+            JobPulse turns a scattered job search into a simple workflow that
+            helps you spend less time searching and more time applying.
           </p>
-
         </div>
 
-
-        {/* =====================================
-            STEPS
-        ===================================== */}
-
+        {/* Steps */}
         <div
           className="
             relative
-            mt-14
-
+            mt-12
             grid
+            w-full
             grid-cols-1
             gap-10
+
+            sm:mt-14
+            sm:gap-12
 
             md:grid-cols-3
             md:gap-6
@@ -170,8 +182,7 @@ function HowItWorks() {
             lg:gap-10
           "
         >
-
-          {/* Connecting Line - Desktop */}
+          {/* Desktop connecting line */}
           <div
             className="
               pointer-events-none
@@ -182,9 +193,9 @@ function HowItWorks() {
               hidden
               border-t
               border-dashed
-              border-violet-200
+              border-blue-200
 
-              dark:border-violet-900
+              dark:border-blue-900
 
               md:block
             "
@@ -196,40 +207,36 @@ function HowItWorks() {
               {...step}
             />
           ))}
-
         </div>
 
-
-        {/* =====================================
-            BOTTOM MESSAGE
-        ===================================== */}
-
+        {/* Bottom Message */}
         <div
           className="
             mx-auto
-            mt-14
+            mt-12
             flex
+            w-full
             max-w-2xl
             flex-col
             items-center
-            justify-center
             gap-3
             rounded-2xl
             border
-            border-violet-100
-            bg-violet-50/60
-            px-5
+            border-blue-100
+            bg-blue-50/60
+            px-4
             py-4
             text-center
 
-            dark:border-violet-900
-            dark:bg-violet-950/20
+            dark:border-blue-900/60
+            dark:bg-blue-950/20
 
+            sm:mt-14
             sm:flex-row
+            sm:px-5
             sm:text-left
           "
         >
-
           <div
             className="
               flex
@@ -239,13 +246,13 @@ function HowItWorks() {
               items-center
               justify-center
               rounded-xl
-              bg-violet-600
+              bg-blue-600
               text-sm
               text-white
               shadow-lg
-              shadow-violet-200/50
+              shadow-blue-200/50
 
-              dark:shadow-violet-950/40
+              dark:shadow-blue-950/40
             "
           >
             ✦
@@ -253,6 +260,7 @@ function HowItWorks() {
 
           <p
             className="
+              min-w-0
               text-xs
               leading-5
               text-slate-600
@@ -262,24 +270,16 @@ function HowItWorks() {
               sm:text-sm
             "
           >
-            The goal is simple: make your job search feel
-            <span className="font-semibold text-violet-600 dark:text-violet-400">
-              {" "}focused, organized, and actionable.
+            The goal is simple: make your job search feel{" "}
+            <span className="font-semibold text-blue-600 dark:text-blue-400">
+              focused, organized, and actionable.
             </span>
           </p>
-
         </div>
-
       </div>
-
     </section>
   );
 }
-
-
-/* =============================================
-   STEP CARD
-============================================= */
 
 function StepCard({
   number,
@@ -292,13 +292,14 @@ function StepCard({
       className="
         group
         relative
+        w-full
+        min-w-0
         text-center
 
         md:text-left
       "
     >
-
-      {/* Step Number / Icon */}
+      {/* Icon */}
       <div
         className="
           relative
@@ -307,27 +308,27 @@ function StepCard({
           flex
           h-14
           w-14
+          shrink-0
           items-center
           justify-center
           rounded-2xl
           border
-          border-violet-200
+          border-blue-200
           bg-white
           text-lg
           font-semibold
-          text-violet-600
-          shadow-[0_8px_25px_rgba(124,58,237,0.08)]
-
+          text-blue-600
+          shadow-[0_8px_25px_rgba(37,99,235,0.08)]
           transition-all
           duration-300
 
           group-hover:-translate-y-1
-          group-hover:border-violet-300
-          group-hover:shadow-[0_12px_30px_rgba(124,58,237,0.16)]
+          group-hover:border-blue-300
+          group-hover:shadow-[0_12px_30px_rgba(37,99,235,0.14)]
 
-          dark:border-violet-800
+          dark:border-blue-900
           dark:bg-slate-900
-          dark:text-violet-400
+          dark:text-blue-400
           dark:shadow-none
 
           md:mx-0
@@ -336,22 +337,20 @@ function StepCard({
         {icon}
       </div>
 
-
-      {/* Number */}
+      {/* Step number */}
       <div
         className="
           mt-4
           text-[10px]
           font-bold
           tracking-[0.18em]
-          text-violet-500
+          text-blue-600
 
-          dark:text-violet-400
+          dark:text-blue-400
         "
       >
         STEP {number}
       </div>
-
 
       {/* Title */}
       <h3
@@ -359,6 +358,7 @@ function StepCard({
           mt-2
           text-lg
           font-bold
+          leading-6
           text-slate-900
 
           dark:text-white
@@ -369,12 +369,12 @@ function StepCard({
         {title}
       </h3>
 
-
       {/* Description */}
       <p
         className="
           mx-auto
           mt-2
+          w-full
           max-w-sm
           text-sm
           leading-6
@@ -388,7 +388,6 @@ function StepCard({
         {description}
       </p>
 
-
       {/* Hover indicator */}
       <div
         className="
@@ -397,8 +396,7 @@ function StepCard({
           h-1
           w-0
           rounded-full
-          bg-violet-500
-
+          bg-blue-600
           transition-all
           duration-300
 
@@ -407,7 +405,6 @@ function StepCard({
           md:mx-0
         "
       />
-
     </article>
   );
 }
